@@ -69,12 +69,12 @@ int main() {
     for (int i = 0; i < TAM_HASH; i++) tabelaHash[i] = NULL;
 
     // Popula a Tabela Hash com as associacoes Pista -> Suspeito
-    inserirNaHash(tabelaHash, "Pegadas de lama", "Sr. Marinho");
-    inserirNaHash(tabelaHash, "Cofre arrombado", "Sr. Marinho");
-    inserirNaHash(tabelaHash, "Copo quebrado", "Coronel Mostarda");
-    inserirNaHash(tabelaHash, "Fio de tecido rasgado", "Coronel Mostarda");
-    inserirNaHash(tabelaHash, "Faca ausente", "Dona Branca");
-    inserirNaHash(tabelaHash, "Livro de venenos", "Dona Branca");
+    inserirNaHash(tabelaHash, "Pegadas de lama", "Sr. Joao Grilo");
+    inserirNaHash(tabelaHash, "Cofre arrombado", "Sr. Joao Grilo");
+    inserirNaHash(tabelaHash, "Copo quebrado", "Coronel Chico");
+    inserirNaHash(tabelaHash, "Fio de tecido rasgado", "Coronel Chico");
+    inserirNaHash(tabelaHash, "Faca ausente", "Rosinha");
+    inserirNaHash(tabelaHash, "Livro de venenos", "Rosinha");
 
     // 2. Montagem manual do Mapa da Mansao
     Sala* raizMansao = criarSala("Hall de entrada");
@@ -258,7 +258,7 @@ void verificarSuspeitoFinal(PistaNode* raizPistas, HashNode** tabela) {
     int evidencias = 0;
 
     printf("\n==================================================\n");
-    printf("                  TRIBUNAL FINAL                  \n");
+    printf("                 TRIBUNAL FINAL                 \n");
     printf("==================================================\n");
     
     if (raizPistas == NULL) {
@@ -269,7 +269,7 @@ void verificarSuspeitoFinal(PistaNode* raizPistas, HashNode** tabela) {
     printf("Suas evidencias (Ordem Alfabetica):\n");
     exibirPistas(raizPistas);
 
-    printf("\nOs suspeitos sao: Coronel Mostarda, Dona Branca e Sr. Marinho.\n");
+    printf("\nOs suspeitos sao: Coronel Chico, Rosinha e Sr. Joao Grilo.\n");
     printf("Quem voce acusa? (Digite o nome): ");
     fgets(acusado, 50, stdin);
     acusado[strcspn(acusado, "\n")] = '\0'; // Remove o \n do final
